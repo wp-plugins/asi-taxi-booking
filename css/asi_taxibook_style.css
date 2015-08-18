@@ -1,0 +1,557 @@
+div.actions
+
+
+
+{
+
+
+
+	display: inline-block;
+
+
+
+	font-size: 0;
+
+
+
+	position: relative;
+
+
+
+	white-space: nowrap;
+
+
+
+	border: 1px solid #D2D2D2;
+
+
+
+}
+
+
+
+div.actions a 
+
+
+
+{
+
+
+
+	font-size: 12px;
+
+
+
+	border-left:1px solid #D2D2D2;
+
+
+
+    display: block;
+
+
+
+    float: left;
+
+
+
+    height: 20px;
+
+
+
+    width: 20px;
+
+
+
+	text-align:center;
+
+
+
+}
+
+
+
+.displayrecord
+
+
+
+{
+
+
+
+    margin-left: 6%;
+
+
+
+    width: 50%;
+
+
+
+    border:1px;
+
+
+
+}
+
+
+.col-md-6{
+    width: 45% !important;
+}
+
+
+
+
+.displayrecord thead tr th ,.displayrecord tbody tr td
+
+
+
+{
+
+
+
+    border:1px solid rgba(16, 69, 128, 0);
+
+
+
+    color:rgb(116, 16, 19);
+
+
+
+    text-align: center;
+
+
+
+}
+
+
+
+.displaybooking
+
+
+
+{
+
+
+
+    width: 100%;
+
+
+
+    border:1px;
+
+
+
+}
+
+
+
+.displaybooking thead tr th ,.displaybooking tbody tr td
+
+
+
+{
+
+
+
+    border:1px solid rgba(16, 69, 128, 0);
+
+
+
+    color:rgb(116, 16, 19);
+
+
+
+    text-align: center;
+
+
+
+}
+
+
+
+#cal1,#res1
+
+{
+
+
+
+    width: 80px;
+
+
+
+    height: 34px; 
+
+
+
+    font-size: 12px;
+
+
+
+    font-family: inherit;
+
+
+
+    color: #FFFFFF; 
+
+
+
+    text-decoration: none; 
+
+
+
+    padding-top: 0px; padding-right: 7px; padding-bottom: 0px; padding-left: 7px; 
+
+
+
+    background-color: #104580; border: solid 1px #104580; cursor: pointer;   
+
+
+
+}
+
+
+
+#cal1:hover,#res1:hover
+
+
+
+{ 
+
+
+
+    font-family: Arial; 
+
+
+
+    color: #91b734; 
+
+
+
+    background-color: #FFFFFF; 
+
+
+
+    border: solid 1px black;
+
+
+
+}	
+
+
+
+.addressBox 
+
+
+
+{ 
+
+
+
+    width: 340px; 
+
+
+
+    height: 29px; 
+
+
+
+    margin-bottom: 12px; 
+
+
+
+    padding: 10px; 
+
+
+
+}
+
+
+
+.taxi_table
+
+
+
+    { 
+
+
+
+    margin-top: 0px; padding: 10px; 
+
+
+
+    background-color: #B4D568; 
+
+
+
+    display: inline-block; 
+
+
+
+    }
+
+
+
+#map_canvas {display: none;}
+
+
+
+#map_canvas.map
+
+
+
+{ 
+
+
+
+    height: 500px; 
+
+
+
+    background: White; 
+
+
+
+    border: 6px solid #104580; 
+
+
+
+    margin-bottom: 20px; margin-top: 5px;
+
+
+
+}
+
+
+
+#map_canvas {
+
+
+
+    padding: 5px;
+
+
+
+    text-align: center;
+
+
+
+    background-color: #e5eecc;
+
+
+
+    border: solid 1px #c3c3c3;
+
+
+
+}
+
+
+
+.nearto
+
+
+
+{
+
+
+
+  cursor: pointer; 
+
+
+
+  color: red;
+
+
+
+} 
+
+
+
+#td {
+
+    border-top: none !important;
+
+    padding: 6px 0px 6px 0 !important;
+
+}  
+
+
+
+.emmc-tooltip {
+
+
+
+        border: 1px solid #666666;
+
+
+
+        background-color: #ffffff;
+
+
+
+        color: #444444;
+
+
+
+        display:none;
+
+
+
+        font-size:13px;
+
+
+
+        padding:1px;
+
+
+
+    }
+
+
+
+.update_btn{
+
+
+
+            width: 100px;
+
+
+
+            height: 10px;
+
+
+
+            position: absolute;
+
+
+
+            left: 0;
+
+
+
+            right: 0;
+
+
+
+            margin: auto;
+
+
+
+        }	
+
+
+
+.table-float { float: left }
+
+
+
+.mystop { height: 26px; line-height: 16pt; font-family: Arial;
+
+
+
+  text-decoration: none;
+
+
+
+  padding-top: 0px;
+
+
+
+  padding-right: 7px;
+
+
+
+  padding-left: 7px;
+
+
+
+  border: solid 1px #104580;
+
+
+
+  width: 70px;
+
+
+
+}
+
+
+
+#customer_order td{
+
+
+
+    border-bottom: none !important;
+
+
+
+    border-right: none !important;
+
+    
+
+    border-top: none !important;
+
+    
+
+    padding: 6px 0px 6px 0 !important
+
+
+
+}
+
+
+
+#customer_order{
+
+
+
+    border: none !important;
+
+
+
+}
+
+
+
+#map_canvas, #flip {
+
+
+
+    padding: 5px;
+
+
+
+    text-align: center;
+
+
+
+    background-color: #e5eecc;
+
+
+
+    border: solid 1px #c3c3c3;
+
+
+
+}
+
+
+
+#po { border: solid 1px #104580; padding: 10px; background-color: #C7D89E; margin-left: 15px; }
+
+
+
+ @media (max-width:590px) {
+
+
+
+#po { margin-top: 13px; margin-left: 0px; }
+
+
+
+.table-float {float: none}
+
+.col-md-6{
+    width: 88% !important;
+}
+
+}
