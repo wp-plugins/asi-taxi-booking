@@ -13,8 +13,9 @@ function asi_taxi_shortcode($atts) {
          $carinfo=new asi_taxibook_plugin_admin();
          $allfare=$carinfo->taxi_allselected_fare();
          $cartypes=$carinfo->taxi_allselected_car();         
-         $select='<select name="cartypes" id="cartypes" style="width:120px;height: 29px;padding-left: 10px; margin-left: 48px;">';
-         $select.='<option value="select" >Select Taxi </option>';
+         $select='<select name="cartypes" class="form-control" id="cartypes" style="width: 75%;padding-left: 15px; float: right;">
+								';
+         $select.='<option value="select" > Select Taxi </option>';
          foreach($cartypes as $car)
          {
             $select.='<option value="'.$car['fare'].'">'.$car['name'].'</option>';
@@ -27,83 +28,113 @@ function asi_taxi_shortcode($atts) {
             $color='style="background-color:'.$allfare[0]['color'].'"';
 
          }        
-		$displayform='<form id="order"><div class="taxi_table col-md-6"'.$color.'><table id="customer_order" style="margin: 0 0 2px;" class="table-float">
-
-	<tbody>
-   <tr>
-	<td style="padding-top: 10px"> 
-    <input style="height: 29px; padding-left: 15px; width: 172px;" type="date" id="bdate" min="2015-06-01"></td><td>
-    <input style="width: 120px; margin-left:48px; height:29px;padding-left: 8px;" type="time" id="btime" value="16:00" name="usr_time"></td></tr>
-    <tr style="    border-bottom: solid 1px rgba(16, 69, 128, 0);"><td width="170px" valign="middle" style="padding-bottom: 5px">
-    <div> <strong>Taxi Type</strong></div></td><td valign="middle"  style="padding-bottom: 5px;">'.$select.'</td></tr>
-    <tr>
-	<td colspan="2" style="padding-top: 10px"> 
-    <input style="border: 1px solid #104580;" id="source" name="source" type="textbox" placeholder="PickUp Address" value="" class="addressBox" />
-            </td></tr>           
-		<tr>
-			<td style="padding-bottom: 5px; width: 170px;"><strong>Additional Stops:</strong> 
-			<div id="stops_div" ></div></td><td><input style="padding: 0px;padding-left: 15px;    width: 120px; margin-left: 48px; height: 29px;" type="number" value="0" min="0" class="mystop" name="stops_count" id="stops_count"  style="vertical-align: middle" /></td></tr>
-            <tr>
-        	<td colspan="2" style="border-bottom: solid 1px rgba(16, 69, 128, 0);">
-            <input style="border: 1px solid #104580;" type="textbox" id="destination"  name="destination"  placeholder="DropOff Address"  class="addressBox" value=""/>
-          </td>
-		</tr>
-        <tr style="border-bottom: solid 1px rgba(16, 69, 128, 0);line-height:5.0px;">
-		<td style="padding-top: 10px; padding-bottom: 1px; width: 170px;border-top: none;">
-        	<strong style="padding-right: 37px; padding-left: 15px;">Adults</strong><strong>Infants</strong></td>
-        <td style="padding-top: 10px; padding-bottom: 1px; width: 170px;border-top: none;">
-        	<strong style="padding-right:5px;padding-left:5px;">Baby Seats</strong><strong style="padding-left:25px;">Bags</strong></td>
-
-		</tr>
-        <tr style="    border-bottom: solid 1px rgba(16, 69, 128, 0);">   
-        <td  style=" padding-bottom:1px; padding-left: 14px;border-top: none;">  
-        <input  style="padding: 0px;padding-left: 15px;" type="number" value="0" min="0" max="10" class="mystop" name="adult_seat" id="adult_seat">
-        <input  style="margin-left: 18px; padding: 0px;padding-left: 15px;" type="number" value="0" min="0" max="10" class="mystop" name="enf_seat" id="enf_seat">
-        </td>
-        <td style="padding-top: 1px; padding-bottom: 1px;border-top: none;">
-        <input  style="padding: 0px; padding-left: 15px;margin-left: 9px;" type="number" value="0" min="0" max="10" class="mystop" name="baby_seat" id="baby_seat">
-         <input style=" margin-left: 15px; padding: 0px;padding-left:15px;" type="number" value="0" min="0" max="10" class="mystop" name="lugg" id="lugg">
-        </td>
-        </tr>
-         <tr>
-	<td colspan="2" style="padding-top: 5px"> 
-    <input style="border: 1px solid #104580;" id="bname" name="bname" type="textbox" placeholder="Name" class="addressBox" />
-            </td></tr> 
-        <tr>
-	<td colspan="2" style="padding-top: 0px"> 
-    <input style="border: 1px solid #104580;" id="bemail" name="bemail" type="text" placeholder="Your Email" class="addressBox" />
-            </td></tr>
-    <tr>
-	<td colspan="2" style="padding-top: 0px"> 
-    <input style="border: 1px solid #104580;" id="bcell" name="bcell" type="textbox" placeholder="Your Phone Number" class="addressBox" />
-            </td></tr> 
-  	<tr><td colspan="2">
-                <input type="hidden" name="distance"  id="distance" readonly value=""/>
+		$displayform='<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-6 col-sm-7 col-xs-12" id="main1" style="background-color: "'.$color.'"; padding-bottom: 15px">
+					<form id="order" method="">
+						<div class="row" style="padding-top: 15px;">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<input style="padding-left: 15px; width: 100%;" class="form-control" type="date" id="bdate" min="2015-06-01">
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<input style="width: 75%; float: right;padding-left: 15px;" class="form-control" type="time" id="btime" value="16:00" name="usr_time">
+							</div>
+						</div>
+						<div class="row">
+							<label class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top: 15px">
+								Taxi Type
+							</label>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top: 15px;">
+								'.$select.'
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 15px;">
+								<input type="text" class="form-control" id="source" name="source" placeholder="PickUp Address">                                
+								<input style="display: none;" type="text" hidden class="form-control" id="stops_count_s" name="stops_count">
+							</div>
+						</div>
+						<div class="row">
+							<label class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top: 15px">
+								Additional Stops
+							</label>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top: 15px;">     
+								<input style="padding-left: 15px; width: 75%; float: right;" class="form-control" type="number" value="0" min="0" name="stops_count" id="stops_count">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 15px;">
+                            <input type="textbox" id="destination" name="destination" placeholder="DropOff Address" class="form-control" value="" />
+							</div>
+						</div>
+						<div class="row" >
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+								<label class="col-lg-4 col-md-4 col-sm-3 col-xs-4" style="padding-top: 14px">
+									Adults
+								</label>
+                             <input type="number" value="0" min="0" max="10" class="form-control" name="adult_seat" id="adult_seat" value="" />
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+								<label class="col-lg-4 col-md-4 col-sm-3 col-xs-4" style="padding-top: 14px">
+									Infants
+								</label>
+                                <input type="number" value="0" min="0" max="10" class="form-control" value="" name="enf_seat" id="enf_seat" />
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+								<label class="col-lg-4 col-md-4 col-sm-3 col-xs-4" style="padding-top: 14px">
+									BabySeats
+								</label>
+                                <input type="number" value="0" min="0" max="10" class="form-control" value="" name="baby_seat" id="baby_seat" />
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+								<label class="col-lg-4 col-md-4 col-sm-3 col-xs-4" style="padding-top: 14px">
+									Bags
+								</label>
+                               <input type="number" value="0" min="0" max="10" class="form-control" value="" name="lugg" id="lugg" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 15px;">
+                            <input type="textbox" id="bname" name="bname" placeholder="Your Name" class="form-control" value="" />
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 15px;">
+                            <input type="textbox" id="bemail" name="bemail" placeholder="Your Email" class="form-control" value="" />
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top: 15px;">
+                             <input type="textbox" id="bcell" name="bcell" placeholder="Your Phone No" class="form-control" value="" />
+							</div>
+						</div>
+						<div class="calBlue_line">
+						</div>
+						<div class="form-group">
+							<div class="col-xs-12" style="text-align: center;padding-top: 15px; margin-bottom: 15px">
+								<input type="button" id="cal1" value="Book" onClick="doCalculation()" class="btn btn-primary " name="submit" style="font-size: 14px; font-weight: bold" />
+								<input type="button" id="res1" class="btn" name="reset" value="Reset" onclick="clear_form_elements(this.form)" style="font-size: 14px; font-weight: bold;" />
+							</div>
+                            <input type="hidden" name="distance"  id="distance" readonly value=""/>
                 <input type="hidden" name="fare" id="fare" readonly value=""/>
                 <input type="hidden" name="duration" id="duration" readonly value=""/>
-            </td></tr>
-  <tr>
-    <td colspan="2" align="center" valign="bottom" style="padding-top: 12px;text-align: center;">
-      <input type="button" id="cal1" name="submit" value="Book" onClick="doCalculation()"/>
-      <input type="button" id="res1" name="reset" value="Reset" style="margin-left: 10px;"  onclick="clear_form_elements(this.form)"/>
-    </td>
-  </tr>
-       <input type="hidden"  name="stopfare" id="stopfare" value="'.$allfare[0]['stop'].'"/>
+                <input type="hidden"  name="stopfare" id="stopfare" value="'.$allfare[0]['stop'].'"/>
                 <input type="hidden"  name="milefare" id="milefare" value="'.$allfare[0]['mile'].'"/>
                 <input type="hidden"  name="seatfare" id="seatfare" value="'.$allfare[0]['seat'].'"/>
                 <input type="hidden"  name="minutefare" id="minutefare" value="'.$allfare[0]['minute'].'"/>
                 <input type="hidden"  name="currfare" id="currfare" value="'.$allfare[0]['curr'].'"/>
                 <input type="hidden"  name="adulfare" id="adulfare" value="'.$allfare[0]['adul'].'"/>
                 <input type="hidden"  name="inffare" id="inffare" value="'.$allfare[0]['inf'].'"/>
-                <input type="hidden"  name="luggfare" id="luggfare" value="'.$allfare[0]['lugg'].'"/>
-</tbody></table>
-	<div class="table-float" style="text-align: center">
+                <input type="hidden"  name="luggfare" id="luggfare" value="'.$allfare[0]['lugg'].'"/>             
+			
+						</div>
+						<div class="table-float" style="text-align: center; margin-top: 10px; float: none">
+							<div id="po" style="display: inline-block; text-align: left">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+        <div class="table-float" style="text-align: center">
 		<div id="po" style="display: none; text-align: left"></div> 
-	</div>
-	<div class="clear"></div>
-</div>
-<div class="clear"></div>
-</form>';
+	</div>';
 return $displayform;
 
 } 

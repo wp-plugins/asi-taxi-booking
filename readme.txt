@@ -12,11 +12,11 @@ Tested up to: 4.3
 Stable tag: trunk
 
 Tags: Taxi Booking, taxi fare calculator, taxi fare, Booking
-ASI Taxi Booking is a basic booking plugin to allow companies to give an option to their customers to make a current or advance booking.  The booking details will be emailed to the company admin, upon which the admin can take an action.  
+ASI Taxi Booking is a basic booking plugin to allow companies to give an option to their customers to make a current or advance booking.  
 
 == Description ==
 
-Adaptive Solutions Inc. has several years of expertise in developing auto dispatching taxi system with mobile and web interface.  The purpose of this plugin is to assist companies related to taxi business to allow it's customers to make current or advance booking.To give a feedback or to request an advance version of this plugin please contact us at info1@adaptivesolutionsinc.com.
+Adaptive Solutions Inc. has several years of expertise in developing auto dispatching taxi system with mobile and web interface.  The purpose of this plugin is to assist companies related to taxi business to allow it's customers to make current or advance booking. The booking details will be emailed to the company admin, upon which the admin can take an action. To give a feedback or to request an advance version of this plugin please contact us at info1@adaptivesolutionsinc.com.
 Please use shortcode [asi-booktaxi] to display and use the plugin.
 
 = Fare Calculation =
