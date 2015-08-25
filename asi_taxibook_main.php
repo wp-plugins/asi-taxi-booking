@@ -11,9 +11,7 @@ function asi_taxi_shortcode($atts) {
 
          $cartypes=$carinfo->taxi_allselected_car();         
 
-         $select='<select name="cartypes" class="form-control" id="cartypes" style="width: 75%;padding-left: 15px; float: right;">
-
-								';
+         $select='<select name="cartypes" class="form-control" id="cartypes" style="width: 75%;padding-left: 15px; float: right;">';
 
          $select.='<option value="select" > Select Taxi </option>';
 
